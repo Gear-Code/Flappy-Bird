@@ -114,10 +114,9 @@ int main()
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
 		{
-			if(Once)
-			{}
-			else
+			if(!Once)
 			{
+
 				Angle = AngleIncrease;
 				if (!CollisionHit)
 				{
@@ -179,12 +178,9 @@ int main()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Here we got the point system
 		if (pipe1.Points(FlappyBird.getPosition().x) || pipe2.Points(FlappyBird.getPosition().x))
 		{
-			if (OnePerPoint)
+			if (!OnePerPoint)
 			{
 
-			}
-			else
-			{
 				FlappyPoints++;
 				FlappyPointSound.play();
 				std::cout << FlappyPoints << std::endl;
