@@ -1,0 +1,8 @@
+*.dll
+*.db
+*.sln
+
+.vs/
+Debug/
+Release/
+deps/
